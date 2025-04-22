@@ -63,7 +63,7 @@ class BaseModule(ABC):
     All modules must inherit from this class and implement the required methods.
     """
     
-    def __init__(self, context: Dict[str, Any] = None):
+    def __init__(self, context: Dict[str, Any] = field(default_factory=dict)):
         """
         Initialize the module.
         
@@ -121,7 +121,7 @@ class BaseModule(ABC):
         
         return True, None
     
-    async def execute(self, args: Dict[str, Any] = None) -> ModuleResult:
+    async def execute(self, args: Dict[str, Any] = field(default_factory=dict)) -> ModuleResult:
         """
         Execute the module with the provided arguments.
         
@@ -131,7 +131,6 @@ class BaseModule(ABC):
         Returns:
             The result of the module execution.
         """
-        args = args or {}
         self.start_time = time.time()
         self.status = ModuleStatus.RUNNING
         

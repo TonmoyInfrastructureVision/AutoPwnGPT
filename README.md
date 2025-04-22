@@ -16,22 +16,35 @@
 [![GitHub issues](https://img.shields.io/github/issues/TonmoyInfrastructureVision/AutoPwnGPT)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/pulls)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/graphs/commit-activity)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)](https://hub.docker.com/r/tonmoyinfrastructurevision/autopwngpt)
+[![CodeQL](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/workflows/CodeQL/badge.svg)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/actions?query=workflow%3ACodeQL)
+[![Discord](https://img.shields.io/discord/1234567890?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/autopwngpt)
 
 <br>
-<img src="https://img.shields.io/badge/Security-Offensive-red.svg">
-<img src="https://img.shields.io/badge/AI-Powered-blue.svg">
-<img src="https://img.shields.io/badge/LLM-Integration-purple.svg">
-<img src="https://img.shields.io/badge/Modular-Framework-orange.svg">
-<br><br>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Security-Offensive-red.svg">
+  <img src="https://img.shields.io/badge/AI-Powered-blue.svg">
+  <img src="https://img.shields.io/badge/LLM-Integration-purple.svg">
+  <img src="https://img.shields.io/badge/Modular-Framework-orange.svg">
+  <img src="https://img.shields.io/badge/GUI-PyQt6-green.svg">
+  <img src="https://img.shields.io/badge/Local_LLM-Support-teal.svg">
+</p>
 
 <h3>🧠 Natural Language Penetration Testing Framework</h3>
-<i>You type what you want to do — it figures out how to do it and runs the attack steps modularly</i>
+<p><i>You type what you want to do — it figures out how to do it and runs the attack steps modularly</i></p>
 
-[🚀 Features](#key-features) • [⚡️ Quick Start](#quick-start) • [📘 Documentation](#documentation) • [🛠️ Examples](#examples) • [🤝 Contributing](#contributing)
+<p align="center">
+  <a href="#key-features">🚀 Features</a> •
+  <a href="#quick-start">⚡️ Quick Start</a> •
+  <a href="#documentation">📘 Documentation</a> •
+  <a href="#examples">🛠️ Examples</a> •
+  <a href="#contributing">🤝 Contributing</a>
+</p>
 
----
-
-<img src="https://raw.githubusercontent.com/TonmoyInfrastructureVision/AutoPwnGPT/main/docs/images/dashboard-preview.png" alt="AutoPwnGPT Dashboard" width="800"/>
+<kbd>
+  <img src="https://raw.githubusercontent.com/TonmoyInfrastructureVision/AutoPwnGPT/main/docs/images/dashboard-preview.png" alt="AutoPwnGPT Dashboard" width="800"/>
+</kbd>
 
 </div>
 

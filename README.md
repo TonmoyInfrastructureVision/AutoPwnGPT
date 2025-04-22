@@ -4,12 +4,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
-[![GitHub stars](https://img.shields.io/github/stars/whoami/AutoPwnGPT?style=social)](https://github.com/whoami/AutoPwnGPT/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/whoami/AutoPwnGPT)](https://github.com/whoami/AutoPwnGPT/issues)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/whoami/AutoPwnGPT/pulls)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/whoami/AutoPwnGPT/graphs/commit-activity)
+[![GitHub stars](https://img.shields.io/github/stars/TonmoyInfrastructureVision/AutoPwnGPT?style=social)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/TonmoyInfrastructureVision/AutoPwnGPT)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/pulls)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/graphs/commit-activity)
 
-<img src="https://imgur.com/placeholder-for-logo.png" alt="AutoPwnGPT Logo" width="300"/>
+<!-- <img src="https://imgur.com/placeholder-for-logo.png" alt="AutoPwnGPT Logo" width="300"/> -->
 
 *The AI-powered offensive security framework that translates natural language into modular penetration testing operations*
 
@@ -52,7 +52,7 @@ This tool enables security professionals to conduct comprehensive security asses
 
 ```bash
 # Clone the repository
-git clone https://github.com/whoami/AutoPwnGPT.git
+git clone https://github.com/TonmoyInfrastructureVision/AutoPwnGPT.git
 cd AutoPwnGPT
 
 # Create a virtual environment
@@ -70,7 +70,7 @@ python src/main.py
 
 ```bash
 # Clone the repository
-git clone https://github.com/whoami/AutoPwnGPT.git
+git clone https://github.com/TonmoyInfrastructureVision/AutoPwnGPT.git
 cd AutoPwnGPT
 
 # Build and run with Docker Compose
@@ -82,7 +82,7 @@ docker-compose up -d
 ### Option 3: Install via Script
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/whoami/AutoPwnGPT/main/scripts/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/TonmoyInfrastructureVision/AutoPwnGPT/main/scripts/install.sh | bash
 ```
 
 ## Quick Start
@@ -238,7 +238,7 @@ We welcome contributions from the security community! Please read our [Contribut
 
 ```bash
 # Clone the repository
-git clone https://github.com/whoami/AutoPwnGPT.git
+git clone https://github.com/TonmoyInfrastructureVision/AutoPwnGPT.git
 cd AutoPwnGPT
 
 # Create a virtual environment

@@ -287,6 +287,29 @@ pytest
 - [Twitter](https://twitter.com/autopwngpt)
 - [Blog](https://autopwngpt.com/blog)
 
+## Support
+<div align="center">
+<a href="https://www.buymeacoffee.com/autopwngpt" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+</div>
+
+## Star History
+
+<div align="center">
+<a href="https://star-history.com/#TonmoyInfrastructureVision/AutoPwnGPT&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=TonmoyInfrastructureVision/AutoPwnGPT&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=TonmoyInfrastructureVision/AutoPwnGPT&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=TonmoyInfrastructureVision/AutoPwnGPT&type=Date" />
+  </picture>
+</a>
+</div>
+
+## Activity
+
+<div align="center">
+  <img src="https://repobeats.axiom.co/api/embed/your-repobeats-hash-here.svg" alt="Repobeats analytics" />
+</div>
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -309,5 +332,7 @@ of this software and associated documentation files...
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by the security community</sub>
+  Made with 💫 by <a href="https://github.com/TonmoyInfrastructureVision">Eshan Roy</a>
+  <br />
+  <sub>If you found this project interesting, please consider giving it a ⭐️!</sub>
 </div>

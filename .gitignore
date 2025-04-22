@@ -4,3 +4,96 @@
 # Email: m.eshanized@gmail.com
 # GitHub: https://github.com/TonmoyInfrastructureVision
 # Date: 2025-04-22
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+env.bak/
+venv.bak/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+.classpath
+
+# Project specific
+data/logs/*
+data/reports/*
+data/sessions/*
+!data/logs/.gitkeep
+!data/reports/.gitkeep
+!data/sessions/.gitkeep
+
+# Testing and Coverage
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+htmlcov/
+
+# Documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Operating System
+.DS_Store
+Thumbs.db
+*.log
+*.pot
+*.pyc
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
+# Security (prevent accidental commit of sensitive data)
+*.pem
+*.key
+*.cert
+*.password
+credentials.yaml
+secrets.yaml
+
+# Temporary files
+*.bak
+*.tmp
+*.temp
+.*.swp

@@ -22,7 +22,7 @@ logger = logging.getLogger("autopwngpt.core.error_handler")
 
 class AutoPwnGPTError(Exception):
     """Base exception class for AutoPwnGPT"""
-    def __init__(self, message: str, error_code: str = None):
+    def __init__(self, message: str, error_code: Optional[str] = None):
         self.message = message
         self.error_code = error_code
         super().__init__(self.message)
@@ -49,7 +49,7 @@ class ErrorHandler:
     def __init__(self):
         self.logger = logger
         
-    def handle_error(self, error: Exception, context: Dict[str, Any] = None) -> Dict[str, Any]:
+    def handle_error(self, error: Exception, context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
         Handle an error and return a standardized error response
         
@@ -143,8 +143,8 @@ class ErrorHandler:
     def create_error_response(self, 
                             message: str, 
                             error_type: Type[Exception] = AutoPwnGPTError,
-                            error_code: str = None,
-                            context: Dict[str, Any] = None) -> Dict[str, Any]:
+                            error_code: Optional[str] = None,
+                            context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
         Create a standardized error response
         

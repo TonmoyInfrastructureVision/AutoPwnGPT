@@ -176,6 +176,12 @@ class BaseModule(ABC):
             self.status = ModuleStatus.CANCELLED
             self.logger.info(f"Module {self.name} cancelled")
     
+    async def cleanup(self) -> None:
+        """Clean up any resources used by the module."""
+        if self.status == ModuleStatus.RUNNING:
+            self.cancel()
+        self.logger.info(f"Cleaned up module {self.name}")
+        
     @abstractmethod
     async def _execute(self, args: Dict[str, Any]) -> ModuleResult:
         """

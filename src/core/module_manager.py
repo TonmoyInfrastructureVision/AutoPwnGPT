@@ -115,7 +115,7 @@ class ModuleManager:
         """
         return self.modules.get(name)
     
-    def get_module_instance(self, name: str, context: Dict[str, Any] = None) -> Optional[BaseModule]:
+    def get_module_instance(self, name: str, context: Optional[Dict[str, Any]] = None) -> Optional[BaseModule]:
         """
         Get or create a module instance by name.
         
@@ -140,7 +140,7 @@ class ModuleManager:
             return None
         
         # Create a new instance
-        instance = module_class(context=context)
+        instance = module_class(context=context or {})
         self.module_instances[name] = instance
         return instance
     
@@ -169,8 +169,8 @@ class ModuleManager:
                 modules[name] = module_class.get_info()
         return modules
     
-    async def execute_module(self, name: str, args: Dict[str, Any] = None, 
-                            context: Dict[str, Any] = None) -> ModuleResult:
+    async def execute_module(self, name: str, args: Optional[Dict[str, Any]] = None, 
+                            context: Optional[Dict[str, Any]] = None) -> ModuleResult:
         """
         Execute a module by name.
         
@@ -192,7 +192,7 @@ class ModuleManager:
         
         # Execute the module
         self.logger.info(f"Executing module: {name}")
-        result = await instance.execute(args)
+        result = await instance.execute(args or {})
         return result
     
     def get_module_dependencies(self, name: str) -> List[str]:

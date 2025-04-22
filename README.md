@@ -1,6 +1,14 @@
-# AutoPwnGPT 
+# AutoPwnGPT
 
 <div align="center">
+
+```
+    _         _        ____                  ____ ____ _____
+   / \  _   _| |_ ___ |  _ \__      ___ __ / ___|  _ \_   _|
+  / _ \| | | | __/ _ \| |_) \ \ /\ / / '_ \ |  _| |_) || |
+ / ___ \ |_| | || (_) |  __/ \ V  V /| | | | |__|  __/ | |
+/_/   \_\__,_|\__\___/|_|     \_/\_/ |_| |_|\____|_|    |_|
+```
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
@@ -9,17 +17,25 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/pulls)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/TonmoyInfrastructureVision/AutoPwnGPT/graphs/commit-activity)
 
-<!-- <img src="https://imgur.com/placeholder-for-logo.png" alt="AutoPwnGPT Logo" width="300"/> -->
+<br>
+<img src="https://img.shields.io/badge/Security-Offensive-red.svg">
+<img src="https://img.shields.io/badge/AI-Powered-blue.svg">
+<img src="https://img.shields.io/badge/LLM-Integration-purple.svg">
+<img src="https://img.shields.io/badge/Modular-Framework-orange.svg">
+<br><br>
 
-*The AI-powered offensive security framework that translates natural language into modular penetration testing operations*
+<h3>🧠 Natural Language Penetration Testing Framework</h3>
+<i>You type what you want to do — it figures out how to do it and runs the attack steps modularly</i>
 
-[Features](#key-features) • [Installation](#installation) • [Quick Start](#quick-start) • [Documentation](#documentation) • [Examples](#examples) • [Contributing](#contributing)
-
-</div>
+[🚀 Features](#key-features) • [⚡️ Quick Start](#quick-start) • [📘 Documentation](#documentation) • [🛠️ Examples](#examples) • [🤝 Contributing](#contributing)
 
 ---
 
-## Overview
+<img src="https://raw.githubusercontent.com/TonmoyInfrastructureVision/AutoPwnGPT/main/docs/images/dashboard-preview.png" alt="AutoPwnGPT Dashboard" width="800"/>
+
+</div>
+
+## 🎯 Overview
 
 AutoPwnGPT is a next-generation offensive security tool that combines a modular penetration testing framework with a GPT-powered natural language interface. The core concept is elegantly simple yet powerful: **"You type what you want to do — it figures out how to do it and runs the attack steps modularly."**
 

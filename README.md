@@ -1,4 +1,23 @@
-# AutoPwnGPT Project
+# AutoPwnGPT 
+
+<div align="center">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+[![GitHub stars](https://img.shields.io/github/stars/whoami/AutoPwnGPT?style=social)](https://github.com/whoami/AutoPwnGPT/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/whoami/AutoPwnGPT)](https://github.com/whoami/AutoPwnGPT/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/whoami/AutoPwnGPT/pulls)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/whoami/AutoPwnGPT/graphs/commit-activity)
+
+<img src="https://imgur.com/placeholder-for-logo.png" alt="AutoPwnGPT Logo" width="300"/>
+
+*The AI-powered offensive security framework that translates natural language into modular penetration testing operations*
+
+[Features](#key-features) • [Installation](#installation) • [Quick Start](#quick-start) • [Documentation](#documentation) • [Examples](#examples) • [Contributing](#contributing)
+
+</div>
+
+---
 
 ## Overview
 
@@ -6,18 +25,77 @@ AutoPwnGPT is a next-generation offensive security tool that combines a modular 
 
 This tool enables security professionals to conduct comprehensive security assessments using natural language commands, which are automatically translated into technical operations executed by specialized modules.
 
+<div align="center">
+<img src="https://imgur.com/placeholder-for-screenshot.png" alt="AutoPwnGPT Screenshot" width="800"/>
+</div>
+
 ## Key Features
 
-- **Natural Language Interface**: Use plain English commands to orchestrate complex security operations
-- **Modular Execution Engine**: Tasks are broken down into classic pentesting modules (e.g., Nmap, Nikto, Hydra)
-- **Contextual Memory**: Maintains state during assessment sessions for multi-step attacks and chaining
-- **Payload Generator**: Dynamically creates payloads for various attack scenarios
-- **Recon & Exploit Chains**: Suggests and auto-executes post-exploitation steps
-- **Reports & Session Logs**: Generates detailed reports with attack paths and findings
-- **Offline Mode**: Functions in air-gapped environments using local LLMs
-- **PyQt6 GUI**: Modern, intuitive graphical interface for visualizing operations
+- **🧠 Natural Language Interface**: Use plain English commands to orchestrate complex security operations
+- **🧩 Modular Execution Engine**: Tasks are broken down into classic pentesting modules (e.g., Nmap, Nikto, Hydra)
+- **🧿 Contextual Memory**: Maintains state during assessment sessions for multi-step attacks and chaining
+- **💣 Payload Generator**: Dynamically creates payloads for various attack scenarios
+- **🔄 Recon & Exploit Chains**: Suggests and auto-executes post-exploitation steps
+- **📊 Reports & Session Logs**: Generates detailed reports with attack paths and findings
+- **🔌 Offline Mode**: Functions in air-gapped environments using local LLMs
+- **🖥️ PyQt6 GUI**: Modern, intuitive graphical interface for visualizing operations
 
-## Complete Project Structure
+## Installation
+
+### Prerequisites
+
+- Python 3.10 or higher
+- Git
+- [Optional] Docker for containerized deployment
+
+### Option 1: Direct Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/whoami/AutoPwnGPT.git
+cd AutoPwnGPT
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+python src/main.py
+```
+
+### Option 2: Docker Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/whoami/AutoPwnGPT.git
+cd AutoPwnGPT
+
+# Build and run with Docker Compose
+docker-compose up -d
+
+# Access the application at http://localhost:8080
+```
+
+### Option 3: Install via Script
+
+```bash
+curl -sSL https://raw.githubusercontent.com/whoami/AutoPwnGPT/main/scripts/install.sh | bash
+```
+
+## Quick Start
+
+```python
+# Launch the GUI
+python src/main.py
+
+# Or use the CLI
+python src/cli.py "scan the target 192.168.1.10 for open ports and vulnerabilities"
+```
+
+## Project Structure
 
 ```
 AutoPwnGPT/
@@ -44,188 +122,24 @@ AutoPwnGPT/
 │   ├── version.py            # Version information
 │   │
 │   ├── api/                  # REST API for integrations
-│   │   ├── __init__.py
-│   │   ├── authentication.py # API auth mechanism
-│   │   ├── middleware.py     # Request/response processing
-│   │   ├── models.py         # API data models
-│   │   ├── routes.py         # API endpoints
-│   │   └── server.py         # API server implementation
-│   │
 │   ├── config/               # Configuration management
-│   │   ├── __init__.py
-│   │   ├── defaults.py       # Default settings
-│   │   ├── schema.py         # Config validation schema
-│   │   ├── settings.py       # Settings manager
-│   │   └── user_config.py    # User configuration
-│   │
 │   ├── core/                 # Core engine components
-│   │   ├── __init__.py
-│   │   ├── command_processor.py # Command interpretation
-│   │   ├── context_manager.py   # Session context
-│   │   ├── engine.py            # Main execution engine
-│   │   ├── error_handler.py     # Error management
-│   │   ├── logging_system.py    # Logging functionality
-│   │   ├── module_manager.py    # Module handling
-│   │   ├── session.py           # Session management
-│   │   ├── task_scheduler.py    # Task scheduling
-│   │   └── workflow_manager.py  # Operation workflows
-│   │
 │   ├── database/             # Data persistence
-│   │   ├── __init__.py
-│   │   ├── db_manager.py     # Database connection
-│   │   ├── migrations.py     # Schema migrations
-│   │   ├── models.py         # ORM models
-│   │   └── query_builder.py  # SQL query construction
-│   │
 │   ├── gui/                  # PyQt6-based interface
-│   │   ├── __init__.py
-│   │   ├── about_dialog.py   # About information
-│   │   ├── console_widget.py # Command console
-│   │   ├── dashboard_widget.py # Main dashboard
-│   │   ├── main_window.py    # Main application window
-│   │   ├── module_browser_widget.py # Module browser
-│   │   ├── network_visualizer_widget.py # Target visualization
-│   │   ├── report_viewer.py  # Report viewing
-│   │   ├── resources.py      # GUI resources
-│   │   ├── results_viewer_widget.py # Results display
-│   │   ├── session_manager_dialog.py # Session control
-│   │   ├── settings_dialog.py # Settings interface
-│   │   ├── styles.py         # UI styling
-│   │   │
-│   │   └── resources/        # GUI assets
-│   │       ├── icons/        # Application icons
-│   │       │   └── __init__.py
-│   │       ├── images/       # Images and graphics
-│   │       │   └── __init__.py
-│   │       └── themes/       # UI themes
-│   │           └── __init__.py
-│   │
 │   ├── llm_integration/      # AI model integration
-│   │   ├── __init__.py
-│   │   ├── chain_of_thought.py # Reasoning patterns
-│   │   ├── context_builder.py  # Context generation
-│   │   ├── gpt_interface.py    # GPT API interface
-│   │   ├── llm_manager.py      # LLM control
-│   │   ├── local_llm.py        # Local model support
-│   │   ├── prompt_templates.py # NL templates
-│   │   └── response_parser.py  # LLM response handling
-│   │
 │   ├── modules/              # Attack modules
-│   │   ├── __init__.py
-│   │   ├── base_module.py    # Base module class
-│   │   ├── brute_force.py    # Authentication attacks
-│   │   ├── custom_module_loader.py # Custom module support
-│   │   ├── enumeration.py    # Information gathering
-│   │   ├── exploit.py        # Exploitation framework
-│   │   ├── network.py        # Network operations
-│   │   ├── post_exploitation.py # Post-compromise
-│   │   ├── scanner.py        # Scanning framework
-│   │   ├── social_engineering.py # Human-focused attacks
-│   │   ├── web.py            # Web application testing
-│   │   ├── wireless.py       # Wireless network testing
-│   │   │
-│   │   ├── brute_force/      # Brute force modules
-│   │   ├── custom/           # Custom modules
-│   │   ├── enumeration/      # Enumeration modules
-│   │   ├── exploits/         # Exploit modules
-│   │   │   ├── __init__.py
-│   │   │   ├── buffer_overflow.py  # Buffer overflow exploits
-│   │   │   ├── command_injection.py # Command injection exploits  
-│   │   │   ├── sql_injection.py     # SQL injection exploits
-│   │   │   └── xss.py               # Cross-site scripting exploits
-│   │   ├── network/          # Network modules
-│   │   ├── post_exploitation/ # Post-exploitation
-│   │   ├── scanners/         # Scanner modules
-│   │   │   ├── __init__.py
-│   │   │   ├── api_scanner.py      # API scanning
-│   │   │   ├── network_scanner.py  # Network discovery
-│   │   │   ├── port_scanner.py     # Port scanning
-│   │   │   ├── vulnerability_scanner.py # Vulnerability scanning
-│   │   │   └── web_scanner.py      # Web application scanning
-│   │   ├── social_engineering/ # Social engineering modules
-│   │   └── wireless/        # Wireless testing modules
-│   │
 │   ├── payloads/             # Payload generation
-│   │   ├── __init__.py
-│   │   ├── custom.py         # Custom payload generators
-│   │   ├── encoder.py        # Payload encoding
-│   │   ├── generator.py      # Payload creation
-│   │   ├── shell.py          # Shell payloads
-│   │   └── web.py            # Web payloads
-│   │
 │   ├── reports/              # Report generation
-│   │   ├── __init__.py
-│   │   ├── exporter.py       # Report export formats
-│   │   ├── formatter.py      # Report formatting
-│   │   ├── generator.py      # Report creation
-│   │   ├── template.py       # Report templates
-│   │   └── vulnerability_database.py # Vulnerability info
-│   │
 │   └── utils/                # Utility functions
-│       ├── __init__.py
-│       ├── crypto_utils.py   # Cryptographic utilities
-│       ├── data_utils.py     # Data manipulation
-│       ├── file_utils.py     # File operations
-│       ├── network.py        # Network utilities
-│       ├── os_utils.py       # OS operations
-│       ├── process_utils.py  # Process management
-│       ├── security.py       # Security functions
-│       ├── string_utils.py   # String manipulation
-│       └── validation.py     # Input validation
 │
 ├── data/                     # Data storage
-│   ├── logs/                 # Operation logs
-│   ├── payloads/             # Generated payloads
-│   ├── reports/              # Generated reports
-│   ├── sessions/             # Session data
-│   ├── templates/            # Templates
-│   │   ├── module_template.py  # Module template
-│   │   └── report_template.md  # Report template
-│   └── wordlists/            # Attack wordlists
-│
 ├── docs/                     # Documentation
-│   ├── api/                  # API documentation
-│   │   └── index.md
-│   ├── development/          # Developer documentation
-│   │   ├── architecture.md   # System architecture
-│   │   ├── index.md          # Development overview
-│   │   └── module_development.md # Module creation guide
-│   ├── examples/             # Example documentation
-│   ├── index.md              # Documentation index
-│   ├── installation.md       # Installation guide
-│   └── user_guide/           # User guides
-│       └── index.md
-│
 ├── examples/                 # Example usage scenarios
-│   ├── advanced/             # Advanced examples
-│   │   ├── README.md
-│   │   └── advanced_workflow.py
-│   ├── basic/                # Basic examples
-│   │   ├── README.md
-│   │   ├── basic_scan.py
-│   │   └── basic_web_scan.py
-│   └── custom_modules/       # Custom module examples
-│       └── custom_module_example.py
-│
 ├── scripts/                  # Utility scripts
-│   ├── build.sh              # Build script
-│   ├── install.sh            # Installation script
-│   ├── test.sh               # Test runner
-│   └── update.sh             # Update script
-│
 └── tests/                    # Test suites
-    ├── conftest.py           # Test configuration
-    ├── functional/           # Functional tests
-    │   └── __init__.py
-    ├── integration/          # Integration tests
-    │   ├── __init__.py
-    │   └── test_workflows.py
-    └── unit/                 # Unit tests
-        ├── __init__.py
-        ├── test_core.py      # Core component tests
-        ├── test_llm.py       # LLM integration tests
-        └── test_modules.py   # Module tests
 ```
+
+For a complete directory structure, see the [Project Structure Documentation](docs/development/architecture.md).
 
 ## Component Explanations
 
@@ -270,14 +184,6 @@ The PyQt6-based interface provides:
 - **Results Viewer**: Display of operation results and findings
 - **Report Viewer**: Interactive report viewing and export
 
-### Utilities and Support Systems
-
-- **Database**: Persistent storage for scan results, vulnerabilities, and session data
-- **Reports**: Generation of comprehensive security assessment reports
-- **API**: RESTful interface for programmatic access and integration
-- **Config**: Configuration management for application settings and preferences
-- **Payloads**: Generation of attack payloads for various attack scenarios
-
 ## Security & Ethics
 
 AutoPwnGPT is designed strictly for authorized penetration testing and red team assessments. It includes:
@@ -285,6 +191,8 @@ AutoPwnGPT is designed strictly for authorized penetration testing and red team 
 - Comprehensive audit logging
 - Target scope enforcement
 - Usage watermarking
+
+**⚠️ IMPORTANT:** This tool should only be used against systems you own or have explicit permission to test. Unauthorized use is illegal and unethical.
 
 ## Tech Stack
 
@@ -294,18 +202,83 @@ AutoPwnGPT is designed strictly for authorized penetration testing and red team 
 - **Tool Integration**: Standard security tools (Nmap, etc.)
 - **Storage**: SQLite for data persistence
 
-## Installation
+## Documentation
 
-[Installation instructions will be added here]
+Complete documentation is available in the [docs](docs/) directory:
 
-## Usage
+- [Installation Guide](docs/installation.md)
+- [User Guide](docs/user_guide/index.md)
+- [API Documentation](docs/api/index.md)
+- [Developer Guide](docs/development/index.md)
+- [Module Development](docs/development/module_development.md)
 
-[Usage examples will be added here]
+## Examples
+
+Check out these examples to get started:
+
+- [Basic Scan](examples/basic/basic_scan.py): Simple target scanning
+- [Web Application Assessment](examples/basic/basic_web_scan.py): Web application security testing
+- [Advanced Workflow](examples/advanced/advanced_workflow.py): Complex multi-stage operations
+- [Custom Module Development](examples/custom_modules/custom_module_example.py): Creating your own modules
+
+## Roadmap
+
+- [ ] Integration with additional security tools
+- [ ] Enhanced reporting with interactive visualizations
+- [ ] Support for collaborative team-based assessments
+- [ ] Advanced exploit development capabilities
+- [ ] Cloud-based deployment options
+- [ ] Mobile application testing modules
 
 ## Contributing
 
-[Contribution guidelines will be added here]
+We welcome contributions from the security community! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
+
+### Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/whoami/AutoPwnGPT.git
+cd AutoPwnGPT
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate
+
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Run tests
+pytest
+```
+
+## Community
+
+- [Discord](https://discord.gg/autopwngpt)
+- [Twitter](https://twitter.com/autopwngpt)
+- [Blog](https://autopwngpt.com/blog)
 
 ## License
 
-[License information will be added here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+```
+MIT License
+
+Copyright (c) 2025 Eshan Roy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files...
+```
+
+## Acknowledgements
+
+- [OpenAI](https://openai.com/) for GPT technology
+- The open-source security tools community
+- All contributors who have helped shape this project
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by the security community</sub>
+</div>

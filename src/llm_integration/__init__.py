@@ -1,6 +1,15 @@
-# AutoPwnGPT LLM Integration Package
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-Author: Eshan Roy
-Email: m.eshanized@gmail.com
-GitHub: https://github.com/TonmoyInfrastructureVision
-Date: 2025-04-22
+"""
+AutoPwnGPT LLM Integration Package.
+Contains functionality for integrating with language models.
+"""
+
+from src.llm_integration.llm_manager import LlmManager
+from src.llm_integration.local_llm import LocalLlmProvider
+
+__all__ = [
+    "LlmManager",
+    "LocalLlmProvider"
+]

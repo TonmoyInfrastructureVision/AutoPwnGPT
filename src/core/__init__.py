@@ -1,6 +1,19 @@
-# AutoPwnGPT Core Package
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-Author: Eshan Roy
-Email: m.eshanized@gmail.com
-GitHub: https://github.com/TonmoyInfrastructureVision
-Date: 2025-04-22
+"""
+AutoPwnGPT Core Package.
+Contains the core functionality of the system.
+"""
+
+from src.core.engine import Engine
+from src.core.command_processor import CommandProcessor
+from src.core.context_manager import ContextManager
+from src.core.module_manager import ModuleManager
+
+__all__ = [
+    "Engine",
+    "CommandProcessor",
+    "ContextManager",
+    "ModuleManager"
+]

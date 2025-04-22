@@ -1,6 +1,20 @@
-# AutoPwnGPT Package
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-Author: Eshan Roy
-Email: m.eshanized@gmail.com
-GitHub: https://github.com/TonmoyInfrastructureVision
-Date: 2025-04-22
+"""
+AutoPwnGPT - Natural Language Penetration Testing Tool.
+
+Type what you want to do — it figures out how to do it and runs the attack steps modularly.
+"""
+
+from src.version import __version__, __author__, __email__, __license__, __copyright__, __status__, __url__
+
+__all__ = [
+    "__version__",
+    "__author__",
+    "__email__",
+    "__license__",
+    "__copyright__",
+    "__status__",
+    "__url__"
+]

@@ -1,22 +1,22 @@
 # AutoPwnGPT Requirements
 
-Author: Eshan Roy
-Email: m.eshanized@gmail.com
-GitHub: https://github.com/TonmoyInfrastructureVision
-Date: 2025-04-22
+# Author: Eshan Roy
+# Email: m.eshanized@gmail.com
+# GitHub: https://github.com/TonmoyInfrastructureVision
+# Date: 2025-04-22
 
-PyQt6>=6.0.0
+PyQt6>=6.4.0
 requests>=2.28.0
-asyncio>=3.4.3
 pyyaml>=6.0
-sqlite3
-opensecurity
-colorama
-rich
-python-dotenv
-apscheduler
-argparse
-py-term
-jinja2
-markdown
-tqdm
+python-dotenv>=0.21.0
+apscheduler>=3.9.0
+# python-term>=1.0.0
+jinja2>=3.1.0
+markdown>=3.4.0
+tqdm>=4.65.0
+colorama>=0.4.6
+rich>=13.0.0
+pydantic>=1.10.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-asyncio>=0.20.0

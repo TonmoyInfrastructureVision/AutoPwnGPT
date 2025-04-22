@@ -25,9 +25,9 @@ AutoPwnGPT is a next-generation offensive security tool that combines a modular 
 
 This tool enables security professionals to conduct comprehensive security assessments using natural language commands, which are automatically translated into technical operations executed by specialized modules.
 
-<div align="center">
+<!-- <div align="center">
 <img src="https://imgur.com/placeholder-for-screenshot.png" alt="AutoPwnGPT Screenshot" width="800"/>
-</div>
+</div> -->
 
 ## Key Features
 
